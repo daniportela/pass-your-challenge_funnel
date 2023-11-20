@@ -1,95 +1,63 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client"
+
+import dynamic from "next/dynamic"
+
+// Components
+import { ArrowCircleDownRounded } from "@mui/icons-material"
+import { Progress, Benefits, Financing, Warranty, Testimonials, Calendar, Button } from "./components"
+
+// Summary cards - Todo: abstract
+const cards = [
+    {
+        id: 1,
+        title: "Rapidez",
+        description: "Gestionamos el proceso de financiamiento de tu cuenta de 1 y 2 fases a velocidad récord en menos de 48 horas por fase."
+    },
+    {
+        id: 2,
+        title: "Garantía",
+        description: "Garantizamos un servicio al 100% sin que tengas que preocuparte por el proceso. En caso contrario, te devolvemos tu dinero"
+    },
+    {
+        id: 3,
+        title: "Variedad",
+        description: "Elige la compañía donde deseas abrir tu cuenta entre Nova Funding, KortanaFx, NextStepFunded y Quantec"
+    }
+]
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    return (
+        <>
+            <main className="d-grid grid-cols-1 items-center line-1 max-width">
+                <section>
+                    <span className="fs-400 fw-300 text-blue text-uppercase d-block">Eleva el nivel de tus inversiones</span>
+                    <h1 className="fs-900 fw-900">¡Aprueba el exámen y accede a tu cuenta financiada!</h1>
+                    <Button text="Únete ahora" className="main-button fs-400 fw-800 d-inline-block" />
+                </section>
+                <iframe height="500" src="https://www.youtube.com/embed/RWWFIgAHg4w?si=BKc9YHN6Ia5jBTGI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+                {/* <ParticlesBackground /> */}
+                <div className="summary d-grid grid-cols-3">
+                    { cards.map(card => (
+                        <article key={card.id}>
+                            <h2 className="fs-500">{card.title}</h2>
+                            <p className="fs-400">{card.description}</p>
+                        </article>
+                    )) }
+                </div>
+            </main>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+            <div className="scroll-down d-flex flex-column items-center">
+                <span className="fs-500">Mira cómo lo hacemos</span>
+                <ArrowCircleDownRounded sx={{ fontSize: "3rem" }} />
+            </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+            <Progress />
+            <Benefits />
+            <Financing />
+            <Warranty />
+            <Testimonials />
+            <Calendar />
+        </>
+    )
 }
