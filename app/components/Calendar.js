@@ -17,7 +17,7 @@ export default function Calendar() {
             <InlineWidget
                 url="https://calendly.com/daaniiportela/30min"
                 pageSettings={{ backgroundColor: "202020", primaryColor: "70C8F2", textColor: "FFFFFF" }}
-                styles={{ height: "700px" }}
+                styles={{ height: "1000px", marginTop: "3rem" }}
             />
         </section>
     )

@@ -15,7 +15,7 @@ export default function Benefits() {
                         Obtén información privilegiada y oportunidades en tiempo real para maximizar tus inversiones, sin costo alguno.
                     </p>
                 </div>
-                <Image src="/seniales.jpg" width={456} height={288} style={{ width: "40%", height: "auto"}} />
+                <Image src="/seniales.jpg" width={456} height={288} alt="Señales financieras en celular y computadora" />
             </article>
             <article className="d-flex">
                 <div className="content">
@@ -26,7 +26,7 @@ export default function Benefits() {
                         inversión y alcanzar el éxito financiero.
                     </p>
                 </div>
-                <Image src="/resources.jpg" width={456} height={288} style={{ width: "40%", height: "auto"}} />
+                <Image src="/resources.jpg" width={456} height={288} alt="Colección de recursos de aprendizaje" />
             </article>
         </section>
     )

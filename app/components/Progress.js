@@ -1,7 +1,6 @@
 // Components
 import Image from "next/image"
 import Button from "./Button"
-import { Verified } from "@mui/icons-material"
 
 export default function Progress() {
     return (
@@ -10,12 +9,12 @@ export default function Progress() {
                 <div className="progress-bar"></div>
 
                 <article className="step">
-                    <Image className="center-self" src="/money.png" width={400} height={400} style={{ width: "100%", height: "auto" }} alt="moneee" />
+                    <Image className="center-self" src="/money.png" width={400} height={400} alt="Dinero saliendo de la pantalla de una laptop" />
                     <div className="track">
                         <div className="ball"></div>
                     </div>
-                    <div className="fs-400 center-self">
-                        <h3 className="fs-600 line-1">Multiplica tu dinero de forma segura</h3>
+                    <div className="step-content fs-400 center-self">
+                        <h3 className="fs-600 line-1">Multiplica tu dinero <br /> de forma segura</h3>
                         <ul role="list">
                             <li>Accede a nuestras cuentas de inversión con fondos de 25k a 400k.</li>
                             <li>Éxito 100% garantizado.</li>
@@ -25,12 +24,12 @@ export default function Progress() {
                 </article>
 
                 <article className="step">
-                    <Image className="center-self" src="/cuenta.png" width={400} height={400} style={{ width: "100%", height: "auto" }} alt="moneee" />
+                    <Image className="center-self" src="/cuenta.png" width={400} height={400} alt="Representación de la Tierra en material oro" />
                     <div className="track">
                         <div className="ball"></div>
                     </div>
-                    <div className="fs-400">
-                        <h3 className="fs-600 line-1">Obtén tu cuenta en tiempo record</h3>
+                    <div className="step-content fs-400 center-self">
+                        <h3 className="fs-600 line-1">Obtén tu cuenta <br/> en tiempo record</h3>
                         <ul role="list">
                             <li>Ejecución ultrarrápida de estrategias de inversión para maximizar tu potencial de ganancias.</li>
                             <li>Soporte personalizado para aprovechar al máximo cada oportunidad financiera.</li>

@@ -9,7 +9,7 @@ export default function Financing() {
             <div className="separator"></div>
 
             <article className="d-flex">
-                <Image className="center-self" width={500} height={500} style={{ width: "80%", height: "auto" }} src="/rocket.png" />
+                <Image className="center-self" width={500} height={500} src="/rocket.png" alt="Representación de un cohete" />
 
                 <div className="rates flex-1">
                     <div className="rates-title">
