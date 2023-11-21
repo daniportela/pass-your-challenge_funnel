@@ -617,8 +617,8 @@ main article p {
   }
 
   /* Testimonials */
-  .author .author-info h4 {
-    width: 70%;
+  .testimonials h3 {
+    width: 80%;
     margin-inline: auto;
   }
 }
