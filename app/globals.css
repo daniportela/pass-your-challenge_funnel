@@ -603,6 +603,17 @@ main article p {
     grid-column: 2;
     width: 90%;
   }
+
+  /* Warranty */
+  .warranty h3,
+  .warranty p {
+    width: 90%
+  }
+
+  /* Book call / Calendar */
+  .book-call h3 {
+    width: 80%;
+  }
 }
 
 @media (width < 450px) {
