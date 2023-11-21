@@ -48,6 +48,7 @@ ol[role='list'] {
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden !important;
 }
 
 html:focus-within {
