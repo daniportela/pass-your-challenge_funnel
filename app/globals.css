@@ -607,12 +607,13 @@ main article p {
   /* Warranty */
   .warranty h3,
   .warranty p {
-    width: 90%
+    width: 95%;
+    margin-inline: auto;
   }
 
   /* Book call / Calendar */
   .book-call h3 {
-    width: 80%;
+    width: 70%;
   }
 }
 
