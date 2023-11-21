@@ -611,9 +611,9 @@ main article p {
     margin-inline: auto;
   }
 
-  /* Book call / Calendar */
-  .book-call h3 {
-    width: 60%;
+  /* Testimonials */
+  .author .author-info h4 {
+    width: 80%;
     margin-inline: auto;
   }
 }
